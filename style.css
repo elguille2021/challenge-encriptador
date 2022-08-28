@@ -1,0 +1,179 @@
+*{
+    /*font-family: 'Orbitron', sans-serif;--este lo tuve que quitar porque desacomoda botones*/ 
+    font-weight:400px;
+    font-size:32px;
+    line-height:150%;
+}
+
+video {         /*video como background*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 90%;
+}
+
+
+header{
+    padding: 20px;
+    position: relative;
+}
+
+
+
+body{
+    background-color: #E5E5E5;
+}
+
+main{
+    display: 	flex; 
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+ 
+ /*EL flex sube el 2do text area (el del mensaje desencriptado) 
+ y lo coloca al lado del 1ero(del encriptado)  es decir en el cuadro 
+ donde descifra en vez de vertical pondrá el cuadro horizontal  */
+
+ .input-texto {   /*baje el cuadro de texto un poco*/
+    margin-top: 90px;
+    opacity: 70%;
+}
+
+.mensaje {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 90px;
+    background-image: url("imagenes/muñeco.png");
+    background-repeat: no-repeat;
+    background-position: 18px;
+    background-size: 300px;
+    opacity: 70%;
+
+}
+ 
+/*.copiar {                   /*junta mas los botones o quita separación entre ellos (update Ahora eso lo hace el hover en ambos botones)*/
+  /*  position: relative;      /*se cambió de 20 px a 2px para subir mas el botón y que quedara mas al nivel del los otros dos*/ 
+  /*  margin-top: 2px;               
+  /*  margin-left: 205px;
+} */
+
+.copiar{
+    background-color: rgb(12, 0, 0);
+    color:white;
+    position: relative;
+    margin-left: 205px;/*75px;*/
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    opacity: 70%;  /*30*/
+}
+
+
+.copiar:hover{                /*el hover es la parte que cambia a gris del botón*/
+    background-color: #8fb92e;  /*gris   #a1a1a1;*/
+    color: black;
+    border: 4px solid white;
+    border-radius: 8px;
+}
+
+
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    opacity: 70%;   /*al poner la opacity aqui DA TRANSPARENCIA Y afecta a los 2 botones no hace falta ya poner uno en cada botón con ponerlo aqui que es la clase botones que maneja ambos es suficiente*/
+}
+
+.encriptar {                         /*les da color a botones de la primera <section> de Encriptar/desencriptar */
+    background-color: darkblue;          /*hover le da un efecto de color neutro qye al pasarle el click cambia al color que tengael botón, en este caso azul*/   
+    color:white;
+   /* opacity: 60%; */
+   cursor: pointer;
+}
+
+                          /*ahora por cada botón (encriptar )tendré un hover (encriptar:hover)con todos estos atributos; igual con desencriptar*/
+.encriptar:hover{
+    background-color: rgb(246, 222, 3);
+    color: black;
+    border: 4px solid white;
+    border-radius: 8px;
+}
+
+
+.desencriptar {
+    margin-left: 30px;
+    /*background-color: rgb(98, 98, 160);
+    color:white;   el margin separa el boton uno de otro*/
+    /*opacity:70%;*/
+    color:white ;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+
+.desencriptar:hover{
+    background-color: rgb(246, 222, 3);
+    color: black;
+    border: 4px solid white;
+    border-radius: 8px;
+}
+
+
+.informacion {
+    font-size: 15px;
+}
+
+
+
+.alert {
+    position: absolute;
+    bottom: 20%;  /*5% pone el texto abajo  y 20% ya lo pone debajo de los botones, como quería*/
+}
+
+.iconoAlert {
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+}
+
+.leyendaAlert {
+    display: inline;
+    padding: 5px;  /* de 5px  para alinear el texto ade advertencia a la derecha*/
+    text-decoration: underline;
+    font-style: italic ;
+    font-family: sans-serif;
+
+}
+
+
+
+
+
+
+
+
+  /*esto da formato a la marca de agua de mi firma y en parte al footer*/
+.nombre{
+    color: #a1a1a1;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-left: 35px;
+}
+
+footer {                    /*dibuja el elipse que contiene al texto del nombre le da transparecia (opacity) y redondea los bordes de las esquinas(radius) y le da relleno (background)*/
+    box-sizing: border-box;
+    position:relative;
+    width: 100%;  
+    padding: 5px; 
+    margin-top: 60px; 
+    background-color: black;
+    opacity: 55%;
+    border-radius: 20px;
+}

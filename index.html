@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css"> 
+    <title>Encriptador-1er Challenge</title>
+</head>
+<body> <!--video de fondo en todo el cuerpo de la página "como fondo"-->
+    <video src="Imagenes/Data Encrypting.mp4" muted autoplay loop type="video/mp4"></video>
+
+    <!--header o cabecera  ahi va el logo  antes del main y de seccionar nuestra página-->
+    <header>
+        <img src="imagenes/Vector.png" alt="Logo de alura con la inicial de letra a">
+
+          <!--Este <div> se puso aqui para que saliera arriba, y no abajo de los botones porque ya se veía muy amontonado-->
+      <div>
+    <h5 class="informacion"></h5>
+    <div class = "alert">    <!--Para CSS: class alert es el div  class iconoAlert es la imagen icono  y class es la alerta del mensaje-->
+        <img class="iconoAlert" src="imagenes/alert.png"> <p class="leyendaAlert">Ingrese solo letras minúsculas y sin acentos.</p> <!--p subraya-->
+</div>  
+
+    </header>
+    <main>    <!-- section o zonas de cuadros de texto dibujados con los textareas  1er Cuadro ingrese el texto aqui-->
+        <section>                                           <!--section 1-->
+            <textarea class="input-texto" cols="40" rows="6"
+                placeholder="Ingrese el texto aquí 
+(Alura 2022. sistema descifrador)">
+</textarea>
+
+<!--antes estaba aquí el <div>  icono de advertencia con el mensaje de ingreso solo de minúsculas lo  quité de qui y lo pasé arriba y se ve mejor-->
+
+<!--div o zonas de 2 botones-->
+            <div class="botones">  
+                <button class="encriptar" onclick="btnEncriptar()" >Encriptar 🔒 </button>
+<!--<input type="button" onclick="captura()" value="Encriptar" class="botone" > Es lo mismo que arriba SOLO ES OTRA FORMA DE DECLARARLO PARA UN BOTON-->
+            <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar 🔓</button> 
+            </div>
+        </section>
+
+            <!--<textarea class="mensaje" cols="18" rows="8"></textarea>
+                <button class="copiar">Copiar</button>  ESTA LINEA NO HIBA AQUI NO ESTABA NI DENTRO DE LA 1ER Section ni 
+                dentro de la 2da, ESTABA AFUERA DE LA 2DA Section 
+                la puse abajo dónde debe ir DENTRO DE LA SECTION INDICADA Y SE SOLUCIONÓ APARECIENDO YA EL BOTON COPIAR -->
+            
+<!--section 2 boton copiar-->
+        <section>     <!--2DO cuadro de texto    class mensaje para los css y js donde tambien se puso la img de fondo-->
+         
+           <textarea class="mensaje" cols="18" rows="8"></textarea>
+                <button class="copiar" onclick="copiar()">Copiar</button>
+                  <!--<input text="otra forma de ingresar texto" cols="1" rows="1" aria-rowspan="2"> </input>--> 
+        </section>
+
+        
+
+
+    </main>  <!--nota cuidar siempre poner la referencia a js-->
+    <script src="javascript.js"></script>  
+</body>
+
+<footer>
+    <p class="nombre">Producciones GS By Guillermo Serrano - Programa ONE - Oracle - Alura Latam</p>
+</footer>
+
+</html>
+<!--MIS ANOTACIONES SOBRE LO QUE APRENDÍ     <main> y <sections>
+    en html5 sabemos que este formateador tiene que ser semántico
+    y main se usa para indicar que esta será 
+nuestra parte principal de nuestro site o página web
+y 1er <main> es para dividir en 2 sections, uno es para la parte 
+encriptar ( o de insertar el texto a descifrar)  y la otra(2do section) es para donde va a aparecer el mensaje en 
+la pantalla-->
+
+<!--<input text="otra forma de ingresar texto" cols="1" rows="1" aria-rowspan="2"> </input>  -->
+<!--  <link rel="stylesheet" href="style.css"> PERMITE TRABAJAR ARCHIVOS CSS POR SEPARADO-->
+<!--algo curioso no aparecía el txto del placeholder pero se descubrió que era porque el 1er <textarea> 
+no tenía que estar alineado a la sangria de la palabra "place holder"  sino pegado a la izquierda es decir 
+dónde aparece por dafault cudando lo creas, luego de moverlo a la izquierda ya aparece el place holder "ingrese
+los datos del texto aqui" del textbox
+
+En el <header> <img src="/imagenes/Vector.png" alt="Logo de alura con la inicial de letra a">
+img es la ruta o el camino de dónde buscamos nuestra imagen y alt es una descripción de la misma
+
+Tip con  Ctrl + barra espaciadora  aparece todo el camino para seleccionar la imagen asi evitamos errores de digitación
+
+para crear nuestros botones el 1er <div> es para poder agrupar los dos botones 
+antes de la 1era <section> o sección
+  
+    <div class="botones">  es la clase que afectará a los 2 botones que tenemos
+POR CIERTO, TODO LO QUE DIGA class HARÁ REFERENCIA A JAVASCRIPT (o a una clase de ella)
+EJ 
+<button class="desencriptar"  hace refereencia a una de las clase que se encuentra en el archivo de javascript.js
+onclick="btnDesencriptar()">  --hace referencia al nombre del objeto botón
+
+<button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button> Quitamos el onclick
+y queda asi
+<button class="desencriptar"> </button> 
+
+las clases son para estilizarlos y llamar a las funciones que vamos a crear con js
+los nombres de estas clases con clave para que puedieramos estilizarlos después y asi 
+darle la forma para que quede lo mas parecido al estilo del archivo figma posible O AL ESTILO QUE QUIERAS Y TENGAS PENSADO
+EN TU CABEZA HACER
+
+**EN RESUMEN AQUI TENEMOS UNOS BOTONES QUE CONTIENEN CLASES(PARA PODER ESTILIZARLOS), (QUE VAN A LLAMAR A CIERTAS FUNCIONES QUE VAMOS A CREAR CON EL JS).. Y MAS BIEN ESAS CLASES VAN A LLAMAR A CIERTAS FUNCIONES QUE HICIMOS EN JS
+
+ESTE ES NUESTRO DESIGN DE FIGMA O(ELEMENTOS)
+EL LOGO, UNA PARTE PARA AGREGAR O ESCRIBIR TEXTO,, 2 BOTONES...OTRA PARTE PARA VER O MOSTRAR EL TEXTO Y OTRO BOTON
+
+
+poner un video como background
+<video src="Imagenes/Data Encrypting.mp4" muted autoplay loop type="video/mp4"></video>  borrar el type=""
+
+
+Esto parte del html del encriptador PERO ILUSTRA QUE HAY MAS DE UNA FORMA DE HACER LO MISMO
+
+<div class="botones">  
+
+/*ENCRIPTAR*/
+Como se hizo
+1.- <button class="encriptar" onclick="btnEncriptar()" >Encriptar 🔒 </button>
+ó
+2.- CON INPUT --Como se podría hacer también
+
+<input type="button" onclick="captura()" value="Encriptar" class="botone" > 
+
+Es lo mismo que arriba SOLO ES OTRA FORMA DE DECLARARLO PARA UN BOTON-->
+
+<!--DESENCRIPTAR--
+<button class="desencriptar" onclick="btnDesencriptar()">Desencriptar 🔓</button> 
+</div>
+
+
+
+-->
